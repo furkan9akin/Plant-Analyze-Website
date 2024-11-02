@@ -1,0 +1,229 @@
+html{
+    background:linear-gradient(rgb(0, 50, 0),rgb(0, 70, 50));
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.header__text {
+      color: white;
+      text-align: center;
+      padding: 12px;
+      text-decoration: none;
+      font-size: 18px; 
+      line-height: 25px;
+      border-radius: 4px;
+      position: relative;
+    }
+
+header{
+    padding:10px;
+    color: white;
+}
+
+.header_{
+    color: white;
+      padding: 12px;
+      font-size: 18px; 
+      line-height: 25px;
+      border-radius: 4px;
+      position: relative;
+}
+.header a.active {
+    text-align: center;
+    color: black;
+    padding: 5px;
+    margin-right: 15px;
+}
+
+.header a.active:hover{
+    box-shadow: 4px 4px 4px 4px #4d4d4d;
+}
+
+
+p {
+    box-shadow: 1px 1px 4px 4px #4d4d4d;;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .result_{
+        margin-right: 625px;
+        h2{
+            text-align: center;
+            color: white;
+            
+        }
+        .result{
+            width: 300px;
+            height: 450px;
+            border-color: gray;
+            border-radius: 24px;
+            background-color: rgb(193, 198, 203);
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+    
+}
+
+
+.box {
+    width: 700px;
+    height: 500px;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    background-color: aliceblue;
+    text-align: center;
+    display: flex; /* Flexbox özelliklerini aktif eder */
+    justify-content: center; /* Yatayda ortalama */
+    align-items: center; /* Dikeyde ortalama */
+    flex-direction: column;
+    x{
+        padding: 10px;
+        background-color:rgb(59, 130, 246);
+        color: white;
+        gap: 15px;
+        padding: 15px;
+        border-radius: 12px;
+        }
+}
+
+.upload-input {
+    display: none; /* input type file'ı gizler */
+}
+
+.upload-label {
+    padding: 10px;
+    background-color: rgb(59, 130, 246);
+    color: white;
+    gap: 15px;
+    padding: 15px;
+    border-radius: 12px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+}
+
+.upload-label:hover {
+    box-shadow: 4px 4px 4px 4px #4d4d4d;
+}
+
+
+.image-preview {
+    width: 100%;
+    max-width: 700px; /* Beyaz dikdörtgenin genişliği */
+    height: 500px;    /* Beyaz dikdörtgenin yüksekliği */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    background-color: aliceblue; /* Beyaz dikdörtgenin arka planı */
+    overflow: hidden; /* Taşmayı engellemek için */
+    border-radius: 12px; /* İsteğe bağlı, köşeleri yuvarlatmak için */
+}
+
+.image-fit {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: scale-down; /* Görsel kutuya taşmadan sığdırılır */
+    border-radius: 12px; /* Görselin köşelerini de yuvarlatır */
+}
+
+.form__text {
+    line-height: 1.5;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    width: 33%;
+    font-size: 18px;
+    padding: 6px 10px;
+  }
+  
+  .form__input {
+    line-height: 1.5;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    width: 33%;
+    font-size: 18px;
+    padding: 6px 10px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+  }
+  
+  .form__input2{
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    line-height: 1.5;
+    width: 33%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+    font-size: 18px;
+  }
+  
+  .form__button{
+    line-height: 1.5;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    width: 33%;
+    font-size: 18px;
+    padding: 6px 10px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: black;
+    color: white;
+    resize: none;
+  }
+
+  .flash-messages ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .flash-messages li {
+    padding: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  .success {
+    background-color: #dff0d8;
+    color: #3c763d;
+    border: solid #d6e9c6;
+  }
+  
+  /* Hata mesajları (Kırmızı) */
+  .error {
+    background-color: #f2dede;
+    color: #a94442;
+    border: solid #ebccd1;
+  }

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarım Ürünleri Görü</title>
+  <link rel="stylesheet" href="../static/css/style.css">
+    <style>
+      body{
+          header {
+          background-image: linear-gradient(to bottom, rgb(80,80,80, 0.2), rgb(20,20,20, 0.6)), url('static/img/tarim_bitki.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;  
+          background-size: cover;
+      }
+      h1{
+        color: white;
+      }
+      label{
+        color: white;
+      }
+  }
+  </style>
+</head>
+<body>
+  <header class="header">
+        
+    <div class="header__text">
+        <a class="active" href="/home">Home</a>
+        <a class="active" href="/contact">Contact</a>
+        <a class="active" href="/about">About</a>
+      </div>
+      <div class="header_">
+        <h1>Tarım Ürünleri Görü Sistemi</h1>
+        <h2>Aşağıya bitki görseli yükleyiniz ve bitkinin hangi tarım ürününe ait olduğunu öğrenin:</h2>
+      </div>
+  </header>
+
+
+    <main>
+        <h1>Bize Mesaj Gönderin</h1>          
+    <form action="{{ url_for("contact")}}" method="post">
+    <label class="form__text" for="fullname">Tam adınızı giriniz:</label>
+    <textarea class="form__input" type="text" id="fullname" name="fullname" placeholder="Fullname"rows="1" cols="40"></textarea>
+
+    <label class="form__text" for="mesaj">Mesajınızı giriniz:</label>
+    <textarea class="form__input2"  type="text" id="comments" name="mesaj" placeholder="Message" rows="5" cols="40"></textarea>
+    <br>
+
+    <button class="form__button" type="submit">Gönder</button>
+
+    {% with messages = get_flashed_messages(with_categories=True) %}
+  {% if messages %}
+    <div class="flash-messages">
+      <ul>
+        {% for category, message in messages %}
+          <li class="{{ category }}">{{ message }}</li> <!-- Kategoriye göre class ekleniyor -->
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+{% endwith %}
+    </main>
+    
+</body>
+</html>
